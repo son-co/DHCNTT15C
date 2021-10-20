@@ -13,6 +13,7 @@ public class UDPDateTimeServer {
 
             byte[] give = new byte[1024];
             while (true) {
+                
                 DatagramPacket in = new DatagramPacket(give, give.length);
                 ds.receive(in);
 
