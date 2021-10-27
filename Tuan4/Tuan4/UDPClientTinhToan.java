@@ -30,6 +30,13 @@ public class UDPClientTinhToan {
 
                 ds.send(in);
 
+                int b= Integer.parseInt(bString);
+
+                if(b == 0){
+                    ds.close();
+                    System.exit(0);
+                }
+
                 byte[] nhan = new byte[1024];
 
                 DatagramPacket os = new DatagramPacket(nhan, nhan.length);
@@ -49,15 +56,9 @@ public class UDPClientTinhToan {
 
                 String doc = new String(os.getData(),0,os.getLength());
                 int m= Integer.parseInt(doc);
-                System.out.println(m);
+                System.out.println("KQ: "+m);
 
-                if(bString.compareTo("0")==0){
-                    System.out.println("Client da dong!");
-                    ds.close();
-                    
-                    
-                    break;
-                }
+               
      
             }
         

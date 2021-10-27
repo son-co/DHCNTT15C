@@ -42,7 +42,7 @@ public class UDPDateTimeClient {
                 if(bString.compareTo("0")==0){
                     System.out.println("Client da dong!");
                     cs.close();
-                    
+                    System.exit(0);
                     break;
                 }
                 
